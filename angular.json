@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "dsi-world": "apps/dsi-world",
+    "dsi-world-e2e": "apps/dsi-world-e2e"
+  }
+}

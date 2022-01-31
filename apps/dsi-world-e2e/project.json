@@ -1,0 +1,28 @@
+{
+  "root": "apps/dsi-world-e2e",
+  "sourceRoot": "apps/dsi-world-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/dsi-world-e2e/cypress.json",
+        "devServerTarget": "dsi-world:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "dsi-world:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/dsi-world-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["dsi-world"]
+}
